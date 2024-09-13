@@ -34,24 +34,25 @@
       }
     }
     </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <h1>String Utilities</h1>
         <div class="actions">
-            <button onclick="toLowercase()">Lowercase</button>
-            <button onclick="toUppercase()">Uppercase</button>
-            <button onclick="reverseString()">Reverse</button>
-            <button onclick="countCharacters()">Character Count</button>
-            <button onclick="countWords()">Word Count</button>
+            <button onclick="toLowercase()"><i class="fas fa-arrow-down"></i> Lowercase</button>
+            <button onclick="toUppercase()"><i class="fas fa-arrow-up"></i> Uppercase</button>
+            <button onclick="reverseString()"><i class="fas fa-exchange-alt"></i> Reverse</button>
+            <button onclick="countCharacters()"><i class="fas fa-text-width"></i> Character Count</button>
+            <button onclick="countWords()"><i class="fas fa-calculator"></i> Word Count</button>
         </div>
         <div class="split-actions">
             <input type="text" id="splitDelimiter" placeholder="Split delimiter">
             <label>
                 <input type="checkbox" id="keepEmpty"> Keep empty tokens
             </label>
-            <button onclick="splitString()">Split String</button>
+            <button onclick="splitString()"><i class="fas fa-cut"></i> Split String</button>
         </div>
     </header>
     

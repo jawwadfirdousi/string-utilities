@@ -1,0 +1,131 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #333;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+header {
+    background-color: #f5f5f7;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+h1 {
+    margin: 0 0 20px 0;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.actions, .split-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    background-color: #0071e3;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #0077ed;
+}
+
+button:active {
+    background-color: #006edb;
+}
+
+main {
+    flex-grow: 1;
+    padding: 20px;
+    display: flex;
+}
+
+.editor-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+}
+
+textarea {
+    flex: 1;
+    padding: 12px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    resize: vertical;
+    border: 1px solid #d2d2d7;
+    border-radius: 6px;
+    min-height: 150px;
+}
+
+#outputArea {
+    background-color: #f5f5f7;
+}
+
+.split-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+
+.split-actions input[type="text"] {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 1px solid #d2d2d7;
+    border-radius: 6px;
+    width: 120px;
+}
+
+.split-actions label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    .editor-container {
+        flex-direction: row;
+    }
+
+    textarea {
+        min-height: 300px;
+    }
+
+    .split-actions {
+        justify-content: flex-end;
+    }
+}
+
+@media (max-width: 767px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    .actions, .split-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    button, .split-actions input[type="text"] {
+        width: 100%;
+    }
+}
